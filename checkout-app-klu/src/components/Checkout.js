@@ -26,7 +26,7 @@ const Checkout = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:8000/transactions/', {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/transactions/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
